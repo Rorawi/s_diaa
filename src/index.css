@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1a88c2;
+  --secondary-color: #22719b;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  line-height: 1.28em;
+}
+
+p,a {
+  font-family: "Plus Jakarta Sans", serif;
+	line-height: 1.7em;
+}
+
+header {
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-cover {
+  background-image: url("./assets/close-up-community-concept-with-hands.jpg");
+  background-size: cover;
+}
+
+/* .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    outline: none;
+    background-color: #4baf47;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    box-shadow: 6px 6px 0px 0px #046d3a;
+    margin-bottom: 6px;
+}
+
+.btn:hover {
+  box-shadow: -6px -6px 0px 0px  #046d3a;
+  font-family: "Plus Jakarta Sans", serif;
+} */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    outline: none;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-family: "Plus Jakarta Sans", serif;
+    border-radius: 8px;
+}
+.btn.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+  /* box-shadow: -6px -6px 0px 0px var(--secondary-color); */
+  background-color: var(--secondary-color);
+}
+
+.greenbg-cover {
+  background-image: url("./assets/wavy-bg.svg");
+  background-size: cover;
+  background-color: var(--primary-color);
+  height: 100%;
+}
+
+.-mt-70 {
+  margin-top: -70px;
+}
+
+
+.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  border: 5px solid #22719b !important;
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #fff;
+  transition: .2s;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  box-shadow: 2px 2px 2px 0px #697883d9;
+}
