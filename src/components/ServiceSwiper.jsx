@@ -85,14 +85,14 @@ const ServicesSwiper = () => {
 
 								{/* Button */}
 
-								<Link
+								{/* <Link
 									to="/services"
 									className="relative inline-flex items-center group transition-colors duration-300"
 								>
 									<span>Learn More</span>
 									<FiArrowUpRight className="ml-1" />
 									<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-								</Link>
+								</Link> */}
                 
 							</div>
 						</SwiperSlide>

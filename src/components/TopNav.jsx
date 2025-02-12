@@ -48,7 +48,7 @@ const TopNav = () => {
 								About Us
 							</a>
 						</li>
-						<li className="mr-6">
+						{/* <li className="mr-6">
 							<a
 								href="/services"
 								className={`${
@@ -57,7 +57,7 @@ const TopNav = () => {
 							>
 								Services
 							</a>
-						</li>
+						</li> */}
 						<li>
 							<a
 								href="/contact"
@@ -122,7 +122,7 @@ const TopNav = () => {
 						</a>
 					</li>
 
-					<li className="">
+					{/* <li className="">
 						<a
 							href="/services"
 							className="text-black"
@@ -130,7 +130,7 @@ const TopNav = () => {
 						>
 							Services
 						</a>
-					</li>
+					</li> */}
 					<li>
 						<a
 							href="/contact"

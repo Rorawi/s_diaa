@@ -16,12 +16,13 @@ const Home = () => {
 	return (
 		<div className="">
 			<HeroSection />
-			<ImpactSection />
+			<DevelopmentalGoals />
+			{/* <ImpactSection /> */}
 			<SmallAboutUs />
 			<SmallServices />
 			<ServicesSwiper />
 			<LocationSection />
-			<DevelopmentalGoals />
+			{/* <DevelopmentalGoals /> */}
 			{/* <SocialPlatform /> */}
 		</div>
 	);

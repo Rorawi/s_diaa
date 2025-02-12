@@ -5,9 +5,16 @@ import img3 from "../assets/earth-globe.png";
 import img4 from "../assets/wheelchair.png";
 import img5 from "../assets/jobs.png";
 import img6 from "../assets/team-member.jpg";
+import NCPD from "../assets/NCPD.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GiWorld } from "react-icons/gi";
+import { GiGraduateCap } from "react-icons/gi";
+import { RiCommunityLine } from "react-icons/ri";
+import { MdOutlineWc } from "react-icons/md";
+import { HiOutlineBriefcase } from "react-icons/hi";
+import { WiSolarEclipse } from "react-icons/wi";
+
 import {
 	FaMapMarkerAlt,
 	FaRegLightbulb,
@@ -87,7 +94,7 @@ export function HeroSection() {
 
 export function ImpactSection() {
 	return (
-		<div className="container mx-auto  my-40">
+		<div className="container mx-auto mt-20 mb-40">
 			<div className="px-6 md:px-12">
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 					<div className="">
@@ -231,10 +238,13 @@ export function SmallAboutUs() {
 								</div>
 
 								<div className={`mt-7 ${isTrue ? "hidden" : "block"}`}>
-									<a href="#get-involved" className="btn btn-primary transition">
-										Learn More
-										<FiArrowUpRight className="text-white" />
-									</a>
+									<Link
+									to="/about"
+									className="relative inline-flex items-center group transition-colors duration-300 btn btn-primary transition"
+								>
+									<span>Learn More</span>
+									<FiArrowUpRight className="ml-1" />
+								</Link>
 								</div>
 							</div>
 						</div>
@@ -330,7 +340,7 @@ export const LocationSection = () => {
 
 export const DevelopmentalGoals = () => {
 	return (
-		<div className="container mx-auto my-40">
+		<div className="container mx-auto mt-20 mb-40">
 			<div className="px-6 md:px-12">
 				<h2 className="text-[#22719b] text-[20px] font-bold">Our Goals</h2>
 				<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
@@ -339,9 +349,71 @@ export const DevelopmentalGoals = () => {
 				<img
 					src={developmentplan}
 					alt=""
-					className="w-full h-full"
+					className="w-full h-full hidden"
 					height={400}
 				/>
+					<div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6">
+					<div
+						className="relative p-6 shadow-lg bg-[#1fab66] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Climate Action</p>
+						<WiSolarEclipse className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+					<div
+						className="relative p-6 shadow-lg bg-[#452565] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Decent Work & Economic Growth</p>
+						<HiOutlineBriefcase className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+					<div
+						className="relative p-6 shadow-lg bg-[#b7273b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Quality Education</p>
+						<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+					<div
+						className="relative p-6 shadow-lg bg-[#cd9703] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Sustainable Cities & Communities</p>
+						<RiCommunityLine className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+					<div
+						className="relative p-6 shadow-lg bg-[#f26a2d] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Gender Equality</p>
+						<MdOutlineWc className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+					<div
+						className="relative p-6 shadow-lg bg-[#22719b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						title=""
+					>
+						<div className="absolute inset-0 wavybg-cover bg-center" />
+						<div className="relative z-10">
+						<p className="text-xl font-semibold">Quality Education</p>
+						<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
@@ -394,11 +466,11 @@ export const Footer = () => {
 										About Us
 									</Link>
 								</li>
-								<li className="mb-2">
+								{/* <li className="mb-2">
 									<Link to="/services" className="hover:underline">
 										Services
 									</Link>
-								</li>
+								</li> */}
 								<li className="mb-2">
 									<Link to="/contact" className="hover:underline">
 										Contact Us
@@ -441,9 +513,7 @@ export const Footer = () => {
 							<h2 className="text-[20px] font-bold">Our Patners</h2>
 							<ul className="mt-4">
 								<li className="mb-2">
-									<a href="tel:+0599021021" className="hover:underline">
-										+233 599 021 021
-									</a>
+									<img src={NCPD} alt="National Council of Persons with Disabilities (NCPD)" />
 								</li>
 							</ul>
 						</div>
@@ -632,7 +702,7 @@ export const TeamSection = () => {
 	];
 
 	return (
-		<div className="container mx-auto  my-40">
+		<div className="container mx-auto my-40">
 			<div className="px-6 md:px-12">
 				<h2 className="text-[#22719b] text-[20px] font-bold">Team mates</h2>
 				<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
@@ -642,7 +712,6 @@ export const TeamSection = () => {
 					{teamMembers.map((data, index) => {
 						return (
 							<div>
-								
 								<div className="relative w-full max-w-sm h-[300px] overflow-hidden rounded-lg group">
 									{/* Background Image */}
 									<img
@@ -652,22 +721,22 @@ export const TeamSection = () => {
 									/>
 
 									{/* Overlay */}
-									<div className="absolute inset-0 bg-black/55 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-end items-center p-4">
+									<div className="absolute inset-0 bg-black/55 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex justify-end items-center p-4">
 										{/* Social Icons */}
-										<div className="flex flex-col space-y-4 text-white">
+										<div className="flex flex-col space-y-4 text-white hidden lg:block">
 											{data.socials.map((social, index) => {
 												return (
 													<a
-												href={social.link}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="cursor-pointer"
-											>
-												<div className="text-2xl hover:text-[#ffbc8f] transition-colors mb-4" >
-												{social.icon}
-												</div>
-											</a>
-												)
+														href={social.link}
+														target="_blank"
+														rel="noopener noreferrer"
+														className="cursor-pointer"
+													>
+														<div className="text-2xl hover:text-[#ffbc8f] transition-colors mb-4">
+															{social.icon}
+														</div>
+													</a>
+												);
 											})}
 										</div>
 									</div>
@@ -675,7 +744,27 @@ export const TeamSection = () => {
 								<h2 className="text-[#212121] text-[20px] font-bold mt-4">
 									{data.title}
 								</h2>
-								<p className="text-[#555555] text-[14px] whitespace-pre-line">{data.job}</p>
+								<p className="text-[#555555] text-[14px] whitespace-pre-line">
+									{data.job}
+								</p>
+								<div className="lg:hidden">
+									<div className="flex space-x-4 text-white mt-3">
+										{data.socials.map((social, index) => {
+											return (
+												<a
+													href={social.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="cursor-pointer mr-4 last:mr-0"
+												>
+													<div className="text-3xl text-[#156088] transition-colors mb-4">
+														{social.icon}
+													</div>
+												</a>
+											);
+										})}
+									</div>
+								</div>
 							</div>
 						);
 					})}

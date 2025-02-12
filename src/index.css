@@ -21,10 +21,11 @@ h3 {
   line-height: 1.28em;
 }
 
-p,a {
+p,a,label {
   font-family: "Plus Jakarta Sans", serif;
 	line-height: 1.7em;
 }
+
 
 header {
   font-family: "Plus Jakarta Sans", serif;
@@ -84,6 +85,12 @@ html {
   background-image: url("./assets/wavy-bg.svg");
   background-size: cover;
   background-color: var(--primary-color);
+  height: 100%;
+}
+
+.wavybg-cover {
+  background-image: url("./assets/wavy-bg.svg");
+  background-size: cover;
   height: 100%;
 }
 

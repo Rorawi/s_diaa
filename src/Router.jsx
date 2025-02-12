@@ -6,6 +6,7 @@ import TopNav from "./components/TopNav";
 import { Footer } from "./components/ReusableComponents";
 import ScrollToTop from "./components/ScrollToTop";
 import Service from "./components/Service";
+import Contact from "./components/Contact";
 
 const Router = () => {
 	return (
@@ -16,7 +17,8 @@ const Router = () => {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<AboutUs />} />
-          <Route path="/services" element={<Service />} />
+					<Route path="/services" element={<Service />} />
+					<Route path="/contact" element={<Contact />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

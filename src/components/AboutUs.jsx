@@ -20,7 +20,7 @@ const AboutUs = () => {
 	const interventions = [
 		{
 			img: img1,
-      alt: "Group of cheerful friends with facemasks taking a selfie in the park. Image by wirestock on Freepik",
+			alt: "Group of cheerful friends with facemasks taking a selfie in the park. Image by wirestock on Freepik",
 			title: "Advocacy for the Sustainable Development Goals",
 			quoteText: "📌 Join us in making a difference—get involved today!",
 			description: `	At S-DIAA, we champion a sustainable and equitable world by
@@ -204,12 +204,12 @@ const AboutUs = () => {
 									>
 										Get Involved
 									</a>
-									<a
+									{/* <a
 										href="/donate"
 										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
 									>
 										Donate
-									</a>
+									</a> */}
 								</div>
 							</div>
 						</div>
@@ -218,20 +218,18 @@ const AboutUs = () => {
 
 				<TeamSection />
 
-				<div>
-        <div className="container mx-auto  my-40">
-        <div className="px-6 md:px-12">
-					<h2 className="text-[#22719b] text-[20px] font-bold">Stories</h2>
-					<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
-						Our Impact Stories
-					</h1>
+				<div className="hidden"> 
+					<div className="container mx-auto  my-40">
+						<div className="px-6 md:px-12">
+							<h2 className="text-[#22719b] text-[20px] font-bold">Stories</h2>
+							<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+								Our Impact Stories
+							</h1>
 
-          <div>
-          
-          </div>
+							<div></div>
+						</div>
+					</div>
 				</div>
-        </div>
-        </div>
 			</div>
 		</>
 	);
