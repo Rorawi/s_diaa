@@ -33,9 +33,10 @@ const TopNav = () => {
 								href="/"
 								className={`${
 									scrolled ? "text-black" : "text-white"
-								} transition`}
+								} transition inline-flex items-center group relative`}
 							>
 								Home
+								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
 						<li className="mr-6">
@@ -43,9 +44,10 @@ const TopNav = () => {
 								href="/about"
 								className={`${
 									scrolled ? "text-black" : "text-white"
-								} transition`}
+								} transition inline-flex items-center group relative`}
 							>
 								About Us
+								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
 						{/* <li className="mr-6">
@@ -63,9 +65,10 @@ const TopNav = () => {
 								href="/contact"
 								className={`${
 									scrolled ? "text-black" : "text-white"
-								} transition`}
+								} transition inline-flex items-center group relative`}
 							>
 								Contact Us
+								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
 					</ul>
@@ -80,9 +83,7 @@ const TopNav = () => {
 						{menuOpen ? (
 							<HiOutlineX
 								size={30}
-								className={`${
-									scrolled ? "text-black" : "text-white"
-								} transition`}
+								className="text-black transition"
 							/>
 						) : (
 							<HiOutlineMenu

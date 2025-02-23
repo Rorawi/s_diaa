@@ -1,5 +1,5 @@
 import React from "react";
-import { SmallAboutUs, TeamSection } from "./ReusableComponents";
+import { CeoBiography, SmallAboutUs, TeamSection } from "./ReusableComponents";
 import img1 from "../assets/friends-smiling.jpg";
 import img2 from "../assets/farmers.jpg";
 import img3 from "../assets/happychildwithdisability.jpg";
@@ -122,13 +122,48 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-			<SmallAboutUs />
+			<CeoBiography />
+
+			<div className="relative flex items-center justify-center text-white pt-[100px] pb-[70px]">
+					{/* Background Image */}
+					<div className="absolute inset-0 greenbg-cover bg-center" />
+					<div className="relative z-10 px-6 md:px-12">
+						<div className="container mx-auto">
+							<div className="max-w-2xl mx-auto text-center pb-20">
+								<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+									Become a Change Maker
+								</h1>
+								<p className="text-[18px]">
+									Join us in creating a sustainable future for all. Together, we
+									can make a difference!
+								</p>
+
+								<div className="mt-10 flex justify-center gap-4">
+									<a
+										href="/contact"
+										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
+									>
+										Get Involved
+									</a>
+									{/* <a
+										href="/donate"
+										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
+									>
+										Donate
+									</a> */}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<SmallAboutUs />
 
 			<div>
 				<div className="container mx-auto  my-40">
 					<div className="px-6 md:px-12">
 						<h2 className="text-[#22719b] text-[20px] font-bold">About Us</h2>
-						<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+						<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-20">
 							Our Interventions
 						</h1>
 
@@ -183,40 +218,8 @@ const AboutUs = () => {
 					</div>
 				</div>
 
-				<div className="relative flex items-center justify-center text-white pt-[100px] pb-[70px]">
-					{/* Background Image */}
-					<div className="absolute inset-0 greenbg-cover bg-center" />
-					<div className="relative z-10 px-6 md:px-12">
-						<div className="container mx-auto">
-							<div className="max-w-2xl mx-auto text-center pb-20">
-								<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
-									Become a Change Maker
-								</h1>
-								<p className="text-[18px]">
-									Join us in creating a sustainable future for all. Together, we
-									can make a difference!
-								</p>
-
-								<div className="mt-10 flex justify-center gap-4">
-									<a
-										href="/contact"
-										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
-									>
-										Get Involved
-									</a>
-									{/* <a
-										href="/donate"
-										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
-									>
-										Donate
-									</a> */}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<TeamSection />
+		
+				{/* <TeamSection /> */}
 
 				<div className="hidden"> 
 					<div className="container mx-auto  my-40">

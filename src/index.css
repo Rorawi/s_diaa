@@ -21,7 +21,7 @@ h3 {
   line-height: 1.28em;
 }
 
-p,a,label {
+p,a,label,input,textarea {
   font-family: "Plus Jakarta Sans", serif;
 	line-height: 1.7em;
 }
@@ -117,4 +117,8 @@ html {
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   box-shadow: 2px 2px 2px 0px #697883d9;
+}
+
+.text-red {
+  color: red;
 }

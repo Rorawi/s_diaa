@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import img1 from "../assets/boys-smiling.jpg";
 import img2 from "../assets/mission.png";
 import img3 from "../assets/earth-globe.png";
@@ -6,6 +11,13 @@ import img4 from "../assets/wheelchair.png";
 import img5 from "../assets/jobs.png";
 import img6 from "../assets/team-member.jpg";
 import NCPD from "../assets/NCPD.png";
+import ghschool from "../assets/gh-schools.jpg";
+import inclusion from "../assets/inclusion.png";
+import sedofa from "../assets/sedofa.png";
+import sweb from "../assets/sweb.png";
+import wfp from "../assets/wfp.png";
+import absa from "../assets/absa.png";
+import kweku_kakah from "../assets/kweku_kakah.jpg";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
 import { GiWorld } from "react-icons/gi";
@@ -14,6 +26,7 @@ import { RiCommunityLine } from "react-icons/ri";
 import { MdOutlineWc } from "react-icons/md";
 import { HiOutlineBriefcase } from "react-icons/hi";
 import { WiSolarEclipse } from "react-icons/wi";
+import { PiLinktreeLogoBold } from "react-icons/pi";
 
 import {
 	FaMapMarkerAlt,
@@ -28,6 +41,7 @@ import bulb from "../assets/bulb.png";
 import logomap from "../assets/logo-map.png";
 import developmentplan from "../assets/development-plan.jpg";
 import { Link } from "react-router-dom";
+import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export function HeroSection() {
 	return (
@@ -41,7 +55,7 @@ export function HeroSection() {
 			{/* Content */}
 			<div className="relative z-10 px-6 md:px-12 lg:text-center  gap-6">
 				<div className="flex flex-col justify-center lg:items-center gap-4">
-					<h1 className="text-3xl md:text-6xl font-bold leading-[1.28em]">
+					<h1 className="text-3xl md:text-6xl lg:max-w-3xl font-bold leading-[1.28em]">
 						Empowering Communities, Creating a Sustainable Future
 					</h1>
 					<p className="mt-4 text-lg md:text-xl max-w-3xl leading-[1.7em] text-[18px] mb-6 lg:mx-auto xl:mx-0">
@@ -50,9 +64,9 @@ export function HeroSection() {
 						empower persons with disabilities.{" "}
 					</p>
 					<div className="mt-7">
-						<a href="#contactUs" className="btn btn-primary transition">
+						<Link to="/contact" className="btn btn-primary transition">
 							Get Involved
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -187,7 +201,7 @@ export function SmallAboutUs() {
 
 							<div>
 								<div className="mt-9">
-									<div>
+									<div className="p-4">
 										<div className="flex items-center gap-4 mb-4">
 											<div>
 												<img
@@ -202,17 +216,14 @@ export function SmallAboutUs() {
 											</h2>
 										</div>
 										<p className="text-[#555555] text-[18px] ">
-											We are committed to sustainable development, climate
-											action, and inclusion. Through advocacy, education, and
-											community-driven initiatives, we work to eradicate
-											poverty, create green jobs, and empower persons with
-											disabilities. Our mission and vision guide us in building
-											a better, more inclusive future for all.
+											Our mission is to promote sustainable development, climate
+											action, and inclusion through advocacy, education, and
+											community-driven initiatives.
 										</p>
 									</div>
 								</div>
 								<div className="flex gap-4 mt-9">
-									<div>
+									<div className="p-4">
 										<div className="flex items-center gap-4  mb-4 ">
 											<div>
 												<img
@@ -227,24 +238,24 @@ export function SmallAboutUs() {
 											</h2>
 										</div>
 										<p className="text-[#555555] text-[18px] ">
-											We are committed to sustainable development, climate
-											action, and inclusion. Through advocacy, education, and
-											community-driven initiatives, we work to eradicate
-											poverty, create green jobs, and empower persons with
-											disabilities. Our mission and vision guide us in building
-											a better, more inclusive future for all.
+											To create a world where the SDGs are fully realized,
+											empowering every individual, including PWDs, to lead
+											fulfilling, dignified, and inclusive lives. We envision a
+											society where equality, sustainability, and accessibility
+											are fundamental principles, ensuring no one is left behind
+											in the journey towards global development and prosperity.
 										</p>
 									</div>
 								</div>
 
 								<div className={`mt-7 ${isTrue ? "hidden" : "block"}`}>
 									<Link
-									to="/about"
-									className="relative inline-flex items-center group transition-colors duration-300 btn btn-primary transition"
-								>
-									<span>Learn More</span>
-									<FiArrowUpRight className="ml-1" />
-								</Link>
+										to="/about"
+										className="relative inline-flex items-center group transition-colors duration-300 btn btn-primary transition"
+									>
+										<span>Learn More</span>
+										<FiArrowUpRight className="ml-1" />
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -264,10 +275,10 @@ export const SmallServices = () => {
 				<div className="container mx-auto">
 					<div className="max-w-2xl mx-auto text-center pb-20">
 						<h2 className="text-[20px] font-bold">Our Services</h2>
-						<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+						<h1 className="text-[30px] text-[#fff] md:text-5xl font-bold leading-[1.28em] mb-4">
 							Driving Impact Through Action
 						</h1>
-						<p className="text-[18px]">
+						<p className="text-[18px] text-[#dfdfdf]">
 							We focus on sustainable development, climate advocacy, and
 							community empowerment. Our services are designed to create
 							long-term, meaningful change by supporting individuals,
@@ -291,7 +302,8 @@ export const LocationSection = () => {
 							Find Us on the Map
 						</h1>
 						<p className="text-[#555555] text-[18px] ">
-							We are located at Oshie Street, Osu, Accra.
+							We are located at Ghana Chamber of Young Entrepreneurs (GCYE)
+							building,  Madina Estates.
 							<br /> Our office is open
 							<span className="font-bold"> Monday</span> to{" "}
 							<span className="font-bold"> Friday</span>,{" "}
@@ -308,7 +320,7 @@ export const LocationSection = () => {
 								</div>
 
 								<p className="text-[20px] mb-0 leading-tight">
-									Oshie Street, Osu, Accra
+									21 Jordan Street, Madina Estates
 								</p>
 							</div>
 							<div className="flex items-center gap-3 mb-3">
@@ -322,11 +334,11 @@ export const LocationSection = () => {
 					</div>
 					<div className="h-auto w-full lg:w-1/2 rounded-2xl overflow-hidden">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.072293815058!2d-0.17482242601641756!3d5.556302394424129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9071561ce523%3A0xc1512b1ebe285c57!2sOshie%20Rd%2C%20Accra!5e0!3m2!1sen!2sgh!4v1739226894107!5m2!1sen!2sgh"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.3442977243185!2d-0.16503132601540982!3d5.663249694318187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d009938e927%3A0xde313c73ca615fa0!2sGhana%20Chamber%20of%20Young%20Entrepreneurs!5e0!3m2!1sen!2sgh!4v1740172175721!5m2!1sen!2sgh"
 							title="map"
 							height={450}
 							style={{ border: 0 }}
-							allowfullscreen=""
+							allowFullScreen=""
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
 							className="w-full"
@@ -352,15 +364,15 @@ export const DevelopmentalGoals = () => {
 					className="w-full h-full hidden"
 					height={400}
 				/>
-					<div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div
 						className="relative p-6 shadow-lg bg-[#1fab66] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Climate Action</p>
-						<WiSolarEclipse className="text-white text-6xl mb-2 flex justify-start" />
+							<WiSolarEclipse className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">Climate Action</p>
 						</div>
 					</div>
 					<div
@@ -369,8 +381,10 @@ export const DevelopmentalGoals = () => {
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Decent Work & Economic Growth</p>
-						<HiOutlineBriefcase className="text-white text-6xl mb-2 flex justify-start" />
+							<HiOutlineBriefcase className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">
+								Decent Work & Economic Growth
+							</p>
 						</div>
 					</div>
 					<div
@@ -379,8 +393,8 @@ export const DevelopmentalGoals = () => {
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Quality Education</p>
-						<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+							<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">Quality Education</p>
 						</div>
 					</div>
 					<div
@@ -389,8 +403,10 @@ export const DevelopmentalGoals = () => {
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Sustainable Cities & Communities</p>
-						<RiCommunityLine className="text-white text-6xl mb-2 flex justify-start" />
+							<RiCommunityLine className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">
+								Sustainable Cities & Communities
+							</p>
 						</div>
 					</div>
 					<div
@@ -399,8 +415,8 @@ export const DevelopmentalGoals = () => {
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Gender Equality</p>
-						<MdOutlineWc className="text-white text-6xl mb-2 flex justify-start" />
+							<MdOutlineWc className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">Gender Equality</p>
 						</div>
 					</div>
 					<div
@@ -409,8 +425,8 @@ export const DevelopmentalGoals = () => {
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
 						<div className="relative z-10">
-						<p className="text-xl font-semibold">Quality Education</p>
-						<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+							<GiGraduateCap className="text-white text-6xl mb-2 flex justify-start" />
+							<p className="text-xl font-semibold">Quality Education</p>
 						</div>
 					</div>
 				</div>
@@ -446,8 +462,13 @@ export const Footer = () => {
 								</Link>
 							</div>
 							<div className="border border-[#fff] text-white flex items-center justify-center w-7 h-7 rounded-full hover:shadow-2xl transition cursor-pointer">
-								<Link to="/">
+								<Link to="https://www.linkedin.com/company/sustainable-development-in-africa-advocacy-sdiaa/posts/?feedView=all&viewAsMember=true">
 									<FaLinkedin className="w-4 h-4" />
+								</Link>
+							</div>
+							<div className="border border-[#fff] text-white flex items-center justify-center w-7 h-7 rounded-full hover:shadow-2xl transition cursor-pointer">
+								<Link to="https://linktr.ee/sdiaa">
+									<PiLinktreeLogoBold className="w-4 h-4" />
 								</Link>
 							</div>
 						</div>
@@ -506,14 +527,6 @@ export const Footer = () => {
 									>
 										projects.sdiaa@gmail.com
 									</a>
-								</li>
-							</ul>
-						</div>
-						<div className="w-full">
-							<h2 className="text-[20px] font-bold">Our Patners</h2>
-							<ul className="mt-4">
-								<li className="mb-2">
-									<img src={NCPD} alt="National Council of Persons with Disabilities (NCPD)" />
 								</li>
 							</ul>
 						</div>
@@ -773,10 +786,144 @@ export const TeamSection = () => {
 		</div>
 	);
 };
-export const SocialPlatform = () => {
+
+export const CeoBiography = () => {
 	return (
-		<div className="container mx-auto my-40">
-			<div className="px-6 md:px-12"></div>
+		<div>
+			<div className="container mx-auto my-40">
+				<div className="px-6 md:px-12">
+					<div className="flex flex-col lg:flex-row justify-center gap-10 items-stretch">
+						{/* Image Section */}
+						<div className="w-full lg:w-1/2 rounded-2xl overflow-hidden flex">
+							<img
+								src={kweku_kakah}
+								alt="Kweku Kakah"
+								className="object-cover w-full h-full"
+								width="600"
+								height="400"
+							/>
+						</div>
+						{/* Biography Section */}
+						<div className="w-full lg:w-1/2 flex flex-col justify-between">
+							<div>
+								<h2 className="text-[#22719b] text-[20px] font-bold">
+									Professional Bio
+								</h2>
+								<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-2">
+									Kweku Kakah .PMP
+								</h1>
+								<h1 className="text-[25px] text-[#a9a9a9] italic leading-[1.28em] mb-4">
+									Executive Director
+								</h1>
+								<p className="text-[#555555] text-[18px] mb-10">
+									Kweku Kakah, PMP, is a skilled PR practitioner and Project
+									Manager with expertise in executing impactful developmental
+									projects. He has worked on global sustainability initiatives
+									funded by the EU, SNV International, USAID, the UN, and
+									others.
+								</p>
+								<p className="text-[#555555] text-[18px] mb-10">
+									His strengths include strategic communication, stakeholder
+									engagement, and mobilizing communities for sustainable change.
+									He integrates PR with development goals to drive policy
+									influence and measurable outcomes.
+								</p>
+								<p className="text-[#555555] text-[18px] mb-10">
+									Passionate about inclusivity and sustainability, Kweku
+									advocates for equitable development and leverages
+									communication and project management for lasting impact.
+								</p>
+							</div>
+						</div>{" "}
+						{/* End of Biography Section */}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export const ProjectSupporters = () => {
+	const supportersLogo = [
+		{
+			img: wfp,
+			link: "https://www.wfp.org/",
+			height: 150,
+			width: 150,
+			name: "World Food Programme (WFP",
+		},
+		{
+			img: sedofa,
+			link: "#",
+			height: 200,
+			width: 180,
+			name: "The Sedofa Consultancy (TSC)",
+		},
+		{
+			img: inclusion,
+			link: "https://inclusion-ghana.org/",
+			height: 100,
+			width: 100,
+			name: "Inclusion Ghana",
+		},
+		{
+			img: sweb,
+			link: "#",
+			height: 65,
+			width: 65,
+			name: "SWEB Foundation",
+		},
+		{
+			img: absa,
+			link: "https://www.absa.africa/",
+			height: 150,
+			width: 150,
+			name: "Absa Bank Ghana",
+		},
+		{
+			img: ghschool,
+			link: "https://media.ghschools.online/",
+			height: 57,
+			width: 57,
+			name: "GH Schools",
+		},
+	];
+	return (
+		<div className="container mx-auto my-40 overflow-hidden">
+			<div className="p-6 md:p-12">
+				<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-1 text-center">
+					Our <span className="text-[#22719b]">Project</span> Supporters 🎉
+				</h1>
+				<p className="text-[14px] text-center text-[#555555] lg:mx-auto max-w-3xl mb-6">
+					Our projects are made possible by the generous support of our partners
+					and sponsors. We are grateful for their contributions to our programs
+					and initiatives.
+				</p>
+				<div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+					{supportersLogo.map((data, index) => {
+						return (
+							<div key={index}>
+								<Link
+									to={data.link}
+									className="flex flex-col justify-between m-auto items-center bg-[#f6f6f6] rounded-2xl p-4 h-full"
+								>
+									<img
+										src={data.img}
+										alt="NCPD"
+										className="object-contain"
+										width={data.width}
+										height={data.height}
+									/>
+
+									<h6 className="text-[13px] text-center leading-[1.28em] text-[#555555] font-semibold">
+										{data.name}
+									</h6>
+								</Link>
+							</div>
+						);
+					})}
+				</div>
+			</div>
 		</div>
 	);
 };

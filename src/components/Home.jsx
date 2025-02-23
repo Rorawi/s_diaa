@@ -8,6 +8,7 @@ import {
 	Footer,
 	SocialPlatform,
 	DevelopmentalGoals,
+	ProjectSupporters,
 } from "./ReusableComponents";
 import TopNav from "./TopNav";
 import ServicesSwiper from "./ServiceSwiper";
@@ -21,6 +22,7 @@ const Home = () => {
 			<SmallAboutUs />
 			<SmallServices />
 			<ServicesSwiper />
+			<ProjectSupporters />
 			<LocationSection />
 			{/* <DevelopmentalGoals /> */}
 			{/* <SocialPlatform /> */}
