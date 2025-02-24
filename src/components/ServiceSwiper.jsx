@@ -10,9 +10,6 @@ import {
 	FaHandsHelping,
 	FaBook,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { FiArrowUpRight } from "react-icons/fi";
 
 const services = [
 	{
@@ -63,8 +60,8 @@ const ServicesSwiper = () => {
 					navigation={false}
 					className="w-full h-[450px]"
 				>
-					{services.map((service, index) => (
-						<SwiperSlide key={index} className="flex justify-center">
+					{services.map((service) => (
+						<SwiperSlide key={service.title} className="flex justify-center">
 							<div className="bg-white p-6 shadow-lg w-full flex flex-col justify-evenly items-center text-center rounded-md  h-[400px]">
 								{/* Icon at the top */}
 								<div className="text-[#22719b] text-6xl mb-2">

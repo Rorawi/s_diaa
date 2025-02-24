@@ -1,10 +1,9 @@
 import React from "react";
-import { CeoBiography, SmallAboutUs, TeamSection } from "./ReusableComponents";
+import { CeoBiography, SmallAboutUs } from "./ReusableComponents";
 import img1 from "../assets/friends-smiling.jpg";
 import img2 from "../assets/farmers.jpg";
 import img3 from "../assets/happychildwithdisability.jpg";
 import {
-	FaGlobe,
 	FaUsers,
 	FaLeaf,
 	FaHandsHelping,
@@ -169,12 +168,11 @@ const AboutUs = () => {
 
 						{interventions.map((data, index) => {
 							return (
-								<div>
+								<div key={data.title}>
 									<div
 										className={`flex flex-col lg:flex-row ${
 											index % 2 === 0 ? "lg:flex-row-reverse" : ""
 										} justify-center gap-10 mb-24`}
-										key={index}
 									>
 										<div className="h-auto w-full lg:w-1/2 rounded-2xl overflow-hidden">
 											<img
@@ -197,7 +195,7 @@ const AboutUs = () => {
 													<div className="grid grid-cols-2 gap-3 md:gap-6">
 														{data.value.map((value, index) => (
 															<div
-																key={index}
+																key={data.topic}
 																className="p-6 shadow-lg w-full flex flex-col justify-evenly items-center text-center rounded-md border border-gray-100 h-[150px]"
 																title={value.desc}
 															>

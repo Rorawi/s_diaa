@@ -35,7 +35,7 @@ const TopNav = () => {
 									scrolled ? "text-black" : "text-white"
 								} transition inline-flex items-center group relative`}
 							>
-								Home
+								Home{" "}
 								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
@@ -46,7 +46,7 @@ const TopNav = () => {
 									scrolled ? "text-black" : "text-white"
 								} transition inline-flex items-center group relative`}
 							>
-								About Us
+								About Us{" "}
 								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
@@ -67,7 +67,7 @@ const TopNav = () => {
 									scrolled ? "text-black" : "text-white"
 								} transition inline-flex items-center group relative`}
 							>
-								Contact Us
+								Contact Us{" "}
 								<span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#96c8f7] scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
 							</a>
 						</li>
@@ -81,10 +81,7 @@ const TopNav = () => {
 						onClick={() => setMenuOpen(!menuOpen)}
 					>
 						{menuOpen ? (
-							<HiOutlineX
-								size={30}
-								className="text-black transition"
-							/>
+							<HiOutlineX size={30} className="text-black transition" />
 						) : (
 							<HiOutlineMenu
 								size={30}

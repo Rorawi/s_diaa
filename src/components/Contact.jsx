@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useState }  from "react";
 import { IoMailOpenOutline } from "react-icons/io5";
-import { GiWorld } from "react-icons/gi";
-import { FaCheckCircle, FaMapMarkerAlt,FaTimes } from "react-icons/fa";
+import { FaCheckCircle, FaTimes } from "react-icons/fa";
 import { MdPhoneInTalk } from "react-icons/md";
 import { LocationSection } from "./ReusableComponents";
-import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -16,7 +14,6 @@ const Contact = () => {
 
 	const [errors, setErrors] = useState({});
 	const [successMessage, setSuccessMessage] = useState("");
-	const [isLoading, setIsLoading] = useState(false);
 
 	const validate = () => {
 		let tempErrors = {};
@@ -66,15 +63,9 @@ const Contact = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	const timer = setTimeout(() => {
-	// 		setSuccessMessage("");
-	// 	}, 4000);
-	// 	return () => clearTimeout(timer);
-	// }, [successMessage]);
 
 	return (
-		<div className="relative" role="main">
+		<main className="relative" role="main">
 			<div className="relative w-full xl:h-[70vh] flex items-center justify-center text-white pt-[100px] pb-[70px]" aria-labelledby="contact-heading">
 				{/* Background Image */}
 				<div className="absolute inset-0 bg-cover bg-center" aria-hidden="true" />
@@ -106,7 +97,7 @@ const Contact = () => {
 									We are always available to help you with any questions you may have. Please feel free to reach out to us.
 								</p>
 								<div className="mt-9">
-									<div className="flex items-start items-center gap-3 mb-3">
+									<div className="flex items-start gap-3 mb-3">
 										<div className="bg-white text-[#22719b] flex items-center justify-center w-7 h-7 rounded-full shadow-lg flex-shrink-0" aria-hidden="true">
 											<MdPhoneInTalk className="w-5 h-5" />
 										</div>
@@ -120,7 +111,7 @@ const Contact = () => {
 											</p>
 										</div>
 									</div>
-									<div className="flex items-start items-center gap-3 mb-3">
+									<div className="flex items-start gap-3 mb-3">
 										<div className="bg-white text-[#22719b] flex items-center justify-center w-7 h-7 rounded-full shadow-lg flex-shrink-0" aria-hidden="true">
 											<IoMailOpenOutline className="w-5 h-5" />
 										</div>
@@ -246,7 +237,7 @@ const Contact = () => {
 			</div>
 
 			<LocationSection />
-		</div>
+		</main>
 		
 	);
 };

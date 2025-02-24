@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,7 +8,6 @@ import img3 from "../assets/earth-globe.png";
 import img4 from "../assets/wheelchair.png";
 import img5 from "../assets/jobs.png";
 import img6 from "../assets/team-member.jpg";
-import NCPD from "../assets/NCPD.png";
 import ghschool from "../assets/gh-schools.jpg";
 import inclusion from "../assets/inclusion.png";
 import sedofa from "../assets/sedofa.png";
@@ -18,10 +15,8 @@ import sweb from "../assets/sweb.png";
 import wfp from "../assets/wfp.png";
 import absa from "../assets/absa.png";
 import kweku_kakah from "../assets/kweku_kakah.jpg";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { FiArrowUpRight } from "react-icons/fi";
-import { GiWorld } from "react-icons/gi";
-import { GiGraduateCap } from "react-icons/gi";
+import { GiWorld, GiGraduateCap } from "react-icons/gi";
 import { RiCommunityLine } from "react-icons/ri";
 import { MdOutlineWc } from "react-icons/md";
 import { HiOutlineBriefcase } from "react-icons/hi";
@@ -30,7 +25,6 @@ import { PiLinktreeLogoBold } from "react-icons/pi";
 
 import {
 	FaMapMarkerAlt,
-	FaRegLightbulb,
 	FaFacebook,
 	FaTwitter,
 	FaInstagram,
@@ -39,7 +33,6 @@ import {
 import logo from "../assets/logo.png";
 import bulb from "../assets/bulb.png";
 import logomap from "../assets/logo-map.png";
-import developmentplan from "../assets/development-plan.jpg";
 import { Link } from "react-router-dom";
 import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
@@ -251,7 +244,7 @@ export function SmallAboutUs() {
 								<div className={`mt-7 ${isTrue ? "hidden" : "block"}`}>
 									<Link
 										to="/about"
-										className="relative inline-flex items-center group transition-colors duration-300 btn btn-primary transition"
+										className="relative inline-flex items-center group duration-300 btn btn-primary transition"
 									>
 										<span>Learn More</span>
 										<FiArrowUpRight className="ml-1" />
@@ -358,12 +351,6 @@ export const DevelopmentalGoals = () => {
 				<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
 					Our Sustainable Development Goals
 				</h1>
-				<img
-					src={developmentplan}
-					alt=""
-					className="w-full h-full hidden"
-					height={400}
-				/>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div
 						className="relative p-6 shadow-lg bg-[#1fab66] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
@@ -724,7 +711,7 @@ export const TeamSection = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 					{teamMembers.map((data, index) => {
 						return (
-							<div>
+							<div key={data.name}>
 								<div className="relative w-full max-w-sm h-[300px] overflow-hidden rounded-lg group">
 									{/* Background Image */}
 									<img
@@ -736,9 +723,11 @@ export const TeamSection = () => {
 									{/* Overlay */}
 									<div className="absolute inset-0 bg-black/55 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:flex justify-end items-center p-4">
 										{/* Social Icons */}
-										<div className="flex flex-col space-y-4 text-white hidden lg:block">
+										<div className="hidden lg:block">
+										<div className="flex flex-col space-y-4 text-white">
 											{data.socials.map((social, index) => {
 												return (
+													<div key={social.icon}>
 													<a
 														href={social.link}
 														target="_blank"
@@ -749,8 +738,10 @@ export const TeamSection = () => {
 															{social.icon}
 														</div>
 													</a>
+													</div>
 												);
 											})}
+										</div>
 										</div>
 									</div>
 								</div>
@@ -764,6 +755,7 @@ export const TeamSection = () => {
 									<div className="flex space-x-4 text-white mt-3">
 										{data.socials.map((social, index) => {
 											return (
+												<div key={social.icon}>
 												<a
 													href={social.link}
 													target="_blank"
@@ -774,6 +766,7 @@ export const TeamSection = () => {
 														{social.icon}
 													</div>
 												</a>
+												</div>
 											);
 										})}
 									</div>
@@ -902,7 +895,7 @@ export const ProjectSupporters = () => {
 				<div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 					{supportersLogo.map((data, index) => {
 						return (
-							<div key={index}>
+							<div key={data.name}>
 								<Link
 									to={data.link}
 									className="flex flex-col justify-between m-auto items-center bg-[#f6f6f6] rounded-2xl p-4 h-full"
