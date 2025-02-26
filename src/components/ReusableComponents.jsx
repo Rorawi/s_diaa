@@ -271,7 +271,7 @@ export const SmallServices = () => {
 						<h1 className="text-[30px] text-[#fff] md:text-5xl font-bold leading-[1.28em] mb-4">
 							Driving Impact Through Action
 						</h1>
-						<p className="text-[18px] text-[#dfdfdf]">
+						<p className="text-[18px] text-[#fff]">
 							We focus on sustainable development, climate advocacy, and
 							community empowerment. Our services are designed to create
 							long-term, meaningful change by supporting individuals,
@@ -351,9 +351,9 @@ export const DevelopmentalGoals = () => {
 				<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
 					Our Sustainable Development Goals
 				</h1>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1  md:grid-cols-3 gap-6">
 					<div
-						className="relative p-6 shadow-lg bg-[#1fab66] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#1fab66] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
@@ -363,7 +363,7 @@ export const DevelopmentalGoals = () => {
 						</div>
 					</div>
 					<div
-						className="relative p-6 shadow-lg bg-[#452565] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#452565] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
@@ -375,7 +375,7 @@ export const DevelopmentalGoals = () => {
 						</div>
 					</div>
 					<div
-						className="relative p-6 shadow-lg bg-[#b7273b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#b7273b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
@@ -385,7 +385,7 @@ export const DevelopmentalGoals = () => {
 						</div>
 					</div>
 					<div
-						className="relative p-6 shadow-lg bg-[#cd9703] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#cd9703] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
@@ -397,7 +397,7 @@ export const DevelopmentalGoals = () => {
 						</div>
 					</div>
 					<div
-						className="relative p-6 shadow-lg bg-[#f26a2d] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#f26a2d] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />
@@ -407,7 +407,7 @@ export const DevelopmentalGoals = () => {
 						</div>
 					</div>
 					<div
-						className="relative p-6 shadow-lg bg-[#22719b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 h-[150px] lg:h-[200px] xxl:h-[150px]"
+						className="relative p-6 shadow-lg bg-[#22719b] text-white w-full flex flex-col justify-evenly rounded-md border border-gray-100 lg:h-[150px] xl:h-[200px] xxl:h-[150px]"
 						title=""
 					>
 						<div className="absolute inset-0 wavybg-cover bg-center" />

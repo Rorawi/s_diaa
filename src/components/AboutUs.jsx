@@ -105,7 +105,7 @@ const AboutUs = () => {
 	];
 	return (
 		<>
-			<div className="relative w-full xl:h-[70vh] flex items-center justify-center text-white pt-[100px] pb-[70px]">
+			<div className="relative w-full xl:h[40vh] xxl:h-[35vh] lg:h-[70vh]  flex items-center justify-center text-white pt-[100px] pb-[70px]">
 				{/* Background Image */}
 				<div className="absolute inset-0 bg-cover bg-center" />
 
@@ -129,7 +129,7 @@ const AboutUs = () => {
 					<div className="relative z-10 px-6 md:px-12">
 						<div className="container mx-auto">
 							<div className="max-w-2xl mx-auto text-center pb-20">
-								<h1 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+								<h1 className="text-[30px] text-[#fff] md:text-5xl font-bold leading-[1.28em] mb-4">
 									Become a Change Maker
 								</h1>
 								<p className="text-[18px]">
@@ -140,7 +140,7 @@ const AboutUs = () => {
 								<div className="mt-10 flex justify-center gap-4">
 									<a
 										href="/contact"
-										className="btn bg-[#fff] text-[#000] font-semibold hover:text-white transition-colors "
+										className="btn bg-[#fff] text-[#000] font-semibold hover:shadow-6xl hover:bg-amber-700 hover:text-white transition-colors "
 									>
 										Get Involved
 									</a>
@@ -195,7 +195,7 @@ const AboutUs = () => {
 													<div className="grid grid-cols-2 gap-3 md:gap-6">
 														{data.value.map((value, index) => (
 															<div
-																key={data.topic}
+																key={data.title + index}
 																className="p-6 shadow-lg w-full flex flex-col justify-evenly items-center text-center rounded-md border border-gray-100 h-[150px]"
 																title={value.desc}
 															>

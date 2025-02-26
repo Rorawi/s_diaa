@@ -1,6 +1,5 @@
 import './output.css';
 import Router from './Router';
-
 function App() {
   return (
     <div>

@@ -89,11 +89,11 @@ const Contact = () => {
 						<div className="relative rounded-lg overflow-hidden">
 							<div className="absolute inset-0 greenbg-cover bg-center" aria-hidden="true" />
 							<div className="relative z-10 px-6 md:px-12 py-8 md:py-10">
-								<h2 className="text-[30px] text-[#212121] md:text-5xl font-bold leading-[1.28em] mb-4">
+								<h2 className="text-[30px] text-[#fff] md:text-5xl font-bold leading-[1.28em] mb-4">
 									Get In Touch With Us
 								</h2>
 
-								<p className="text-[#dfdfdf] text-[20px] mb-6">
+								<p className="text-[#fff] text-[20px] mb-6">
 									We are always available to help you with any questions you may have. Please feel free to reach out to us.
 								</p>
 								<div className="mt-9">
@@ -146,6 +146,7 @@ const Contact = () => {
 												name="name"
 												id="name"
 												value={formData.name}
+												placeholder="Your Name"
 												onChange={handleChange}
 												className="w-full h-12 px-4 rounded-lg bg-[#f5f5f5] focus:outline-none"
 												aria-required="true"
@@ -163,6 +164,7 @@ const Contact = () => {
 												name="email"
 												id="email"
 												value={formData.email}
+												placeholder="Your Email"
 												onChange={handleChange}
 												className="w-full h-12 px-4 rounded-lg bg-[#f5f5f5] focus:outline-none"
 												aria-required="true"
@@ -179,6 +181,7 @@ const Contact = () => {
 												name="message"
 												id="message"
 												value={formData.message}
+												placeholder="Your Message"
 												onChange={handleChange}
 												className="w-full h-32 p-4 rounded-lg bg-[#f5f5f5] focus:outline-none"
 												aria-required="true"
